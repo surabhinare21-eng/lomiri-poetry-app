@@ -1,0 +1,15 @@
+{
+    "name": "poetry.surabhi",
+    "description": "apps for poems",
+    "architecture": "$ENV{ARCH}",
+    "title": "poetry",
+    "hooks": {
+        "poetry": {
+            "apparmor": "poetry.apparmor",
+            "desktop":  "poetry.desktop"
+        }
+    },
+    "version": "1.0.0",
+    "maintainer": "surabhi nare <surabhinare21@gmail.com>",
+    "framework" : "$ENV{CLICK_FRAMEWORK}"
+}
