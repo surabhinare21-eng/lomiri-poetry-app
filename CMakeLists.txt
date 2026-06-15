@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 3.0.0)
 project(poetry C CXX)
 
-# Automatically create moc files
 set(CMAKE_AUTOMOC ON)
 
 execute_process(
@@ -26,7 +25,7 @@ install(DIRECTORY assets DESTINATION ${DATA_DIR})
 
 install(DIRECTORY qml DESTINATION ${DATA_DIR})
 
-# Translations
+
 file(GLOB_RECURSE I18N_SRC_FILES RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}/po qml/*.qml qml/*.js)
 list(APPEND I18N_SRC_FILES ${DESKTOP_FILE_NAME}.in.h)
 
@@ -49,7 +48,6 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${DESKTOP_FILE_NAME} DESTINATION ${DAT
 
 add_subdirectory(po)
 
-# Make source files visible in qtcreator
 file(GLOB_RECURSE PROJECT_SRC_FILES
     RELATIVE ${CMAKE_CURRENT_SOURCE_DIR}
     qml/*.qml
