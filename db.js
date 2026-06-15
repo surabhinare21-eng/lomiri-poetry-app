@@ -14,7 +14,7 @@ function init() {
     });
 }
 
-// -------- Poems ----------
+
 function addPoem(title, body, author) {
     var db = getDB();
     db.transaction(function(tx) {
@@ -31,7 +31,7 @@ function getPoems(callback) {
     });
 }
 
-// -------- Profile ----------
+
 function saveProfile(name, bio) {
     var db = getDB();
     db.transaction(function(tx) {
@@ -49,7 +49,7 @@ function getProfile(callback) {
     });
 }
 
-// -------- Friends ----------
+
 function addFriend(name, poems) {
     var db = getDB();
     db.transaction(function(tx) {
